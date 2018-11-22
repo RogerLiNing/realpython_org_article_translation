@@ -1,36 +1,18 @@
-# Python_articles_translation
+# Python articles translation
 
-#### Description
-翻译英文Python文章
+#### 介绍
+平时有时间就翻译一些英文Python文章，上传到仓库中汇总,并且用于微信图文推送。
 
-#### Software Architecture
-Software architecture description
+## RealPython
 
-#### Installation
+- [x] [2018 PyQt5 教程](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/2018%20PyQt5%20%E6%95%99%E7%A8%8B.md)
 
-1. xxxx
-2. xxxx
-3. xxxx
+- [x] [Python的绝对引用 vs 相对引用](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%E7%9A%84%E7%BB%9D%E5%AF%B9%E5%BC%95%E7%94%A8%20vs%20%E7%9B%B8%E5%AF%B9%E5%BC%95%E7%94%A8.md)
 
-#### Instructions
+- [x] [Python初学者的11个小贴士](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%e5%88%9d%e5%ad%a6%e8%80%85%e7%9a%8411%e4%b8%aa%e5%b0%8f%e8%b4%b4%e5%a3%ab.md)
 
-1. xxxx
-2. xxxx
-3. xxxx
+- [x] [Python字符串格式化](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%a0%bc%e5%bc%8f%e5%8c%96.md)
 
-#### Contribution
+- [ ] [Python文档注释的完全指南](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%e6%96%87%e6%a1%a3%e6%b3%a8%e9%87%8a%e7%9a%84%e5%ae%8c%e5%85%a8%e6%8c%87%e5%8d%97.md)
 
-1. Fork the project
-2. Create Feat_xxx branch
-3. Commit your code
-4. Create Pull Request
-
-
-#### Gitee Feature
-
-1. You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2. Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3. Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4. The most valuable open source project [GVP](https://gitee.com/gvp)
-5. The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6. The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- [ ] [Python内存管理](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md)
