@@ -13,6 +13,7 @@
 
 - [x] [Python字符串格式化](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%a0%bc%e5%bc%8f%e5%8c%96.md)
 
-- [ ] [Python文档注释的完全指南](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%e6%96%87%e6%a1%a3%e6%b3%a8%e9%87%8a%e7%9a%84%e5%ae%8c%e5%85%a8%e6%8c%87%e5%8d%97.md)
+- [ ] [Python文档注释的完全指南](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%e6%96%87%e6%a1%a3%e6%b3%a8%e9%87%8a%e7%9a%84%e5%ae%8c%e5%85%a8%e6%8c%87%e5%8d%97.md) - **10%**
 
-- [ ] [Python内存管理](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md)
+- [ ] [Python内存管理](https://gitee.com/rogerlee/Python_articles_translation/blob/master/realpython/Python%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md) - **15%**
+
