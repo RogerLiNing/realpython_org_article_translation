@@ -45,7 +45,7 @@
 
 由于他们不允许去修改别人的内容，所以他们必须要小心翼翼的注意他们所书写的页面。在开始写作之前，他们必须要先询问该书的管理员。然后管理员告诉他们允许书写的地方。
 
-因为这本书已经很久，许多书中的一些故事也不再有任何关联。当没有人阅读或者引用故事时，这些故事就会被删除，腾出空间给新的故事。
+因为这本书已经很旧，许多书中的一些故事也不再有任何关联。当没有人阅读或者引用故事时，这些故事就会被删除，腾出空间给新的故事。
 
 本质上，计算机的内存就像是那本空白的书。其实通常称为固定长度的连续**内存页**（memory pages），这个比喻非常切当。
 
@@ -167,7 +167,7 @@ Python允许你使用`sys`模块来检查一个对象当前的引用计数。你
 
 一个操作系统特定（OS-specific）虚拟内存管理器会为Python进程分配一块内存空间。在下图里面，深灰色的块目前就是被Python进程所拥有：
 
-![vmm](img/memory_management_os_specific_virtual_memory_manager.webp)
+![vmm](img/memory_management_os_specific_virtual_memory_manager.JPG)
 
 Python从内存中取出一部分用于内部使用和非对象内存。其他部分则用于对象存储（你的`int`、`dict`和其他）。这描述还是有点简单了。如果你想要了解全貌，你可以看一下这个CPython源代码<sup>[9]</sup>，所有关于内存管理都在里面了。
 
@@ -177,11 +177,11 @@ CPython有一个对象分配器主要负责在对象内存区域分配内存空�
 
 在源代码<sup>[10]</sup>的注释里将分配器称为“一个高速、为内存块设计的专用的内存分配器，使用在通用的内存管理器（malloc）之上”。在这个例子中，`malloc`是C语言用来进行内存分配的库功能。
 
-现在我们将看一下CPython的内存分配的策略。售前，我们会讨论三个主要的部分，并且它们是如何联系在一起的。
+现在我们将看一下CPython的内存分配的策略。首先，我们会讨论三个主要的部分，并且它们是如何联系在一起的。
 
 Areans是最大内存块并且与内存里的页边界对齐。一个页边界操作系统使用的一个固定长度连续的内存块的边缘。Python假设系统的系统页面大小是256 kb。
 
-![memory_management_arena](img/memory_management_5.webp)
+![memory_management_arena](img/memory_management_5.JPG)
 
 在arena之内是内存池（pools），是一个虚拟的内存页（4 kb）。这些就像是我们比喻的书中的页纸。内存池被分成更小的内存块。
 
@@ -224,7 +224,7 @@ Areans是最大内存块并且与内存里的页边界对齐。一个页边界�
 
 ### 内存块
 
-![memory_management_3.webp](img/memory_management_3.webp)
+![memory_management_3.webp](img/memory_management_3.JPG)
 
 从上面的图表可以看到，内存池包含一个指针指向它们的“空闲”内存块。这个的工作方式有写细微的差别。根据源码的注释中指出：这个分配器 “努力不去触碰所有层级（arena、内存池、内存块）的任何一块内存直到需要真的被需要”。
 
@@ -238,7 +238,7 @@ Areans是最大内存块并且与内存里的页边界对齐。一个页边界�
 
 因为内存管理器释放了内存块，这些被释放的内存块被添加到`空闲内存块`列表的前面。实际的列表可能不是连续的内存块，像那第一个图表。它可能看起来像以下图表：
 
-![memory_management_4.webp](img/memory_management_4.webp)
+![memory_management_4.webp](img/memory_management_4.JPG)
 
 ### Arenas
 
@@ -246,7 +246,7 @@ Arenas包括内存池。这些内存池会有已使用、已满和空闲这些�
 
 Arenas却是分类成一个双链表叫做`usable_arenas`。这个列表根据空闲池的数据进行排序。拥有的内存池越少，Arena就越靠近列表的前面。
 
-![memory_management_6.webp](img/memory_management_6.webp)
+![memory_management_6.webp](img/memory_management_6.JPG)
 
 这也就意味着那些含有数据最多的Arena就会被先选择用来存储数据。但是为什么不是反过来呢？为什么不把数据放到可用空间更多的Arena呢？
 
@@ -267,3 +267,29 @@ Arenas是唯一可以被真正释放的东西，显然这些近乎空闲的arena
 - 在CPython里的数据结构和算法是如何共同工作来帮助内存管理处理你的数据的
 
 Python抽象化了一些与计算机工作的繁琐细节。这给予你可以从高级层面去编写代码的力量，不用去担心那些令人头疼的问题，例如如何或者哪里去存储那些以保存的数据。
+
+
+
+# 文中引用链接
+
+[1] https://docs.python.org/3/reference/index.html
+
+[2] https://en.wikipedia.org/wiki/Assembly_language
+
+[3] https://docs.python.org/3/glossary.html#term-bytecode
+
+[4] http://ironpython.net/
+
+[5] http://www.jython.org/
+
+[6] https://pypy.org/
+
+[7] https://realpython.com/python37-new-features/
+
+[8] https://realpython.com/python-gil/
+
+[9] https://github.com/python/cpython/blob/7d6ddb96b34b94c1cbdf95baa94492c48426404e/Objects/obmalloc.c
+
+[10] https://github.com/python/cpython/blob/7d6ddb96b34b94c1cbdf95baa94492c48426404e/Objects/obmalloc.c
+
+[11] https://github.com/python/cpython/blob/7d6ddb96b34b94c1cbdf95baa94492c48426404e/Objects/obmalloc.c
