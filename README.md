@@ -15,5 +15,5 @@
 
 - [ ] [Python文档注释的完全指南](https://github.com/RogerLiNing/realpython_org_article_translation/blob/master/realpython/Python%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A%E7%9A%84%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97.md) - **10%**
 
-- [ ] [Python内存管理](https://github.com/RogerLiNing/realpython_org_article_translation/blob/master/realpython/Python%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md) - **15%**
+- [x] [Python内存管理](https://github.com/RogerLiNing/realpython_org_article_translation/blob/master/realpython/Python%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.md) 
 
